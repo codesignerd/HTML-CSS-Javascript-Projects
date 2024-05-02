@@ -1,0 +1,58 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    padding: 20%;
+    background-color: rgb(22, 22, 22);
+}
+
+.btnContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.btnContainer button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #fff;
+    width: min(200px, 250px);
+    height: min(150px, 250px);
+    border: 2px solid #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btnContainer .buttons:focus-visible {
+    cursor: pointer;
+    border: 1px solid #fff;
+}
+
+/* *******Background Color*******/
+.blue {
+    background-color: blue;
+}
+.purple {
+    background-color: purple;
+}
+.yellow {
+    background-color: yellow;
+}
+.green {
+    background-color: green;
+}
+.red {
+    background-color: red;
+}
+.teal {
+    background-color: teal;
+}
