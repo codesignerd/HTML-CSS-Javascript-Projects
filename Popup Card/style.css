@@ -23,18 +23,20 @@
     background-color: var(--bg-color);
 }
 
-.container #open {
-    padding: 12px 48px;
-    font-size: 18px;
+.container .btn {
+    padding: 12px 60px;
+    font-size: 20px;
     font-weight: 600;
     border: none;
     outline: none;
     background-color: var(--btn-main);
     color: var(--text-main);
     border-radius: 30px;
+    cursor: pointer;
 }
 
 .popup {
+    width: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,35 +48,36 @@
     position: absolute;
     top: 0%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(0.3);
+    transform: translate(-50%, -50%) scale(0.1);
     visibility: hidden;
+    text-align: center;
+    color: var(--bg-color);
+    transition: transform 0.5s, top 0.5s;
 }
 
 .show-popup {
     top: 50%;
     visibility: visible;
     transform: translate(-50%, -50%) scale(1);
-    animation: top 0.5s, transform 0.4s;
 }
 
 .popup img {
-    margin-top: -25%;
-    width: 180px;
+    margin-top: -50px;
+    width: 120px;
+    border-radius: 50%;
 }
 
 .popup .heading {
     font-size: 2.5rem;
-    font-weight: 600;
-    color: var(--bg-color);
+    font-weight: 500;
 }
 
 .popup .text {
     font-size: 1rem;
     font-weight: 400;
-    color: var(--text-main);
 }
 
-.popup #close {
+.popup .btn2 {
     padding: 12px 32px;
     width: 100%;
     border: none;
@@ -84,4 +87,5 @@
     background-color: var(--btn-alt);
     color: var(--text-alt);
     border-radius: 8px;
+    cursor: pointer;
 }
