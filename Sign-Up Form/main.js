@@ -1,10 +1,7 @@
 // FORM VALIDATION
 const form = document.getElementById("form");
 const userName = document.getElementById("userName");
-
 const userEmail = document.getElementById("userEmail");
-const userBirthday = document.getElementById("userBirthday");
-
 const userPassword = document.getElementById("userPassword");
 const userCheck = document.getElementById("userCheck");
 
@@ -22,7 +19,7 @@ form.addEventListener("submit", (form) => {
     
     validateForm();
 
-    if (userBirthday && userEmail && userName && userPassword !== "" && userCheck.checked !== false) {
+    if (userEmail && userName && userPassword !== "" && userCheck.checked !== false) {
         alert("Thank You! Form Successfully Submitted.");
     }
 });
@@ -36,10 +33,6 @@ function validateForm() {
     else if(userEmail.value == "") {
         message = "Please enter your email";
         userEmail.parentElement.lastElementChild.innerHTML = `${message}`;
-    }
-    else if(userBirthday.value == "") {
-        message = "Please select a birthday";
-        userBirthday.nextElementSibling.innerHTML = `${message}`;
     }
     else if(userPassword.value == "") {
         message = "Please enter a password";
@@ -75,7 +68,7 @@ function showSlide(index) {
   if (index >= slides.length) {
     slideIndex = 0;
   }
-  
+
   else if (index < 0) {
     slideIndex = slides.length - 1;
   }
