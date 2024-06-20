@@ -1,11 +1,23 @@
 ////// Digital Stop Watch Project ///////////
 
 const display = document.getElementById("display");
+const startBtn = document.getElementById("startBtn");
+const stopBtn = document.getElementById("stopBtn");
+const resetBtn = document.getElementById("resetBtn");
+
 let timer = null;
 let startTime = Date.now();
 let elapsedTime = 0;
 let isRunning = false;
 
+// Initialize stop watch
+document.addEventListener("DOMContentLoaded", function () {
+    startBtn.addEventListener("click", start);
+    stopBtn.addEventListener("click", stop);
+    resetBtn.addEventListener("click", reset);
+});
+
+// start stop watch 
 function start() {
     if(!isRunning) {
         startTime = Date.now() - elapsedTime;
@@ -14,8 +26,8 @@ function start() {
     }
 }
 
+// pause stop watch
 function stop() {
-
     if(isRunning) {
     clearInterval(timer);
     elapsedTime = Date.now() - startTime;
@@ -24,6 +36,7 @@ function stop() {
     }
 }
 
+// reset stop watch
 function reset() {
     clearInterval(timer);
     startTime = Date.now();

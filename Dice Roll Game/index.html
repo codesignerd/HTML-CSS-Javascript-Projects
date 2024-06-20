@@ -7,14 +7,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <label for="numOfDice"># no of dice</label>
+    <div class="container">
+    <label for="numOfDice">Enter a dice number</label>
     <input type="number" name="dicenumber" id="numOfDice" min="1" value="1" > 
 
-    <button onclick="rollDice()">Roll Dice</button> <br /> <br >
+    <button id="rollDice">Roll Dice</button>
 
-    <div class="diceResult" id="diceResult"></div> <br />
-    <div class="diceImages" id="diceImages"></div>
-    
+    <div class="result">
+        <div class="diceResult" id="diceResult"></div> <br />
+        <div class="diceImages" id="diceImages"></div>
+    </div>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>

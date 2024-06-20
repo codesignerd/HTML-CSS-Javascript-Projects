@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Conversion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2> Temperature <br /> Converter:</h2> 
+        
+        <input type="text" name="temperature" id="temp" value="0">
+        <p>Please selection a unit</p>
+
+        <div class="selection">
+            <div class="unitGroup">
+                <input type="radio" name="unit" id="toFarenheit">
+                <label for="toFarenheit"> Celcious</label> 
+            </div>
+
+           <div class="indicator">
+            <span>➡</span>
+            <span>⬅</span>
+           </div>
+
+            <div class="unitGroup">
+                <input type="radio" name="unit" id="toCelcious">
+                <label for="toCelcious">Farenheit</label>
+            </div>
+        </div>
+
+        <button type="submit" id="Submit">Convert</button>
+        <p id="tempResult" ></p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

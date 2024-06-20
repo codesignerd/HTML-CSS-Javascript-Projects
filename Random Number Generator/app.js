@@ -13,8 +13,9 @@ let randomNumber1;
 let randomNumber2;
 let randomNumber3;
 
-myBtn.onclick = function() {
+myBtn.addEventListener("click", generateNumber);
 
+function generateNumber() {
     randomNumber1 = Math.floor(Math.random() * max) + min;
     randomNumber2 = Math.floor(Math.random() * max) + min;
     randomNumber3 = Math.floor(Math.random() * max) + min;

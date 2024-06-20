@@ -5,12 +5,19 @@
 }
 
 body {
+    background: linear-gradient(135deg, rgba(124, 4, 148, 0.91), rgba(1, 16, 150, 0.91));
+    background-repeat: no-repeat;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
-    padding: 20%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .labels {
+    background-color: white;
     font-size: 3rem;
     border: 1px solid rgb(230, 230, 230);
     border-radius: 2px;
@@ -18,11 +25,12 @@ body {
 }
 
 button {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: #000000e8;
     font-size: 1.5rem;
     font-weight: 500;
     padding: 16px 16px;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 20px;

@@ -1,12 +1,13 @@
 const colorBtns = document.querySelectorAll("button");
 const body = document.body;
 
-colorBtns.forEach((Btn) => {
-        Btn.addEventListener("click", () => {
-            let color = Btn.className;
-            changeBackground(color);
-        });
+colorBtns.forEach(getColor);
+function getColor(btn) {
+    btn.addEventListener("click", () => {
+        let color = btn.className;
+        changeBackground(color);
     });
+}
 
 function changeBackground(color) {
     body.className = "";

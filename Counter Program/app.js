@@ -1,22 +1,31 @@
 let decreaseBtn = document.getElementById("decreaseBtn");
 let resetBtn = document.getElementById("resetBtn");
 let increaseBtn = document.getElementById("increaseBtn");
-let counter = document.getElementById("counter");
+let counterDisplay = document.getElementById("display");
 
-let count = 0;
+let counter = 0;
 
-increaseBtn.onclick = function() {
-        count++;
-        counter.textContent = count;
-    
+// Initialize counter program
+document.addEventListener("DOMContentLoaded", function () {
+    increaseBtn.addEventListener("click", increaseCounter);
+    decreaseBtn.addEventListener("click", decreaseCounter);
+    resetBtn.addEventListener("click", resetCounter);
+})
+
+// counter increment
+function increaseCounter() {
+    counter++;
+    counterDisplay.textContent = counter;
 }
 
-decreaseBtn.onclick = function() {
-    count--;
-    counter.textContent = count;
+// counter decrement
+function decreaseCounter() {
+    counter--;
+    counterDisplay.textContent = counter;
 }
 
-resetBtn.onclick = function() {
-    count = 0 ;
-    counter.textContent = count;
+// counter reset
+function resetCounter() {
+    counter = 0 ;
+    counterDisplay.textContent = counter;
 }

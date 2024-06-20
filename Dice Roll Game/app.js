@@ -1,3 +1,5 @@
+document.getElementById("rollDice").addEventListener("click", rollDice);
+
 function rollDice() {
     const numOfDice = document.getElementById("numOfDice").value;
     const diceImages = document.getElementById("diceImages");
@@ -12,6 +14,8 @@ function rollDice() {
         images.push(`<img src="dice_images/${value}.png" alt="${value}">`);
     }
 
-    diceResult.textContent =  `dice: ${values.join(', ')}`;
+    diceResult.innerHTML = `
+    <label> Dice: ${values.join(' , ')} </label>
+    `;
     diceImages.innerHTML = images.join('  ');
 }
