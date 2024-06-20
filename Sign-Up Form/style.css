@@ -20,8 +20,8 @@
 }
 
 img {
-    width: auto;
-    max-height: 100%;
+    width: 100%;
+    height: auto;
 }
 
 body {
@@ -34,31 +34,19 @@ section {
     justify-content: center;
     align-content: center;
     width: 100%;
-    min-height: 100svh;
+    height: 100svh;
     backdrop-filter: blur(5px) saturate(80%);
-    padding: 40px 0px;
+    padding: 40px;
     background-color: rgba(255, 255, 255, 0.021);
-}
-
-/* Utilities Class*/
-.error {
-    color: rgb(194, 44, 64);
-    font-size: 12px;
-}
-
-.flex-center {
-    display: flex;
-    justify-content: center;
-}
-
-.flex-column {
-    display: flex;
-    flex-direction: column;
 }
 
 .container {
     margin-inline: auto;
+    min-width: 500px;
     max-width: 960px;
+    height: 100%;
+    overflow: hidden;
+    align-content: stretch;
 }
 
 .container .form {
@@ -144,7 +132,6 @@ button[type="submit"] {
     width: 40%;
     height: 100%;
     position: relative;
-    overflow: hidden;
     flex-grow: 1;
     border-radius: 0px 4px 4px 0px;
 }
@@ -152,7 +139,6 @@ button[type="submit"] {
 .container .banner .slides {
     width: 100%;
     height: 100%;
-    margin-inline: auto;
     overflow: hidden;
     
 }
@@ -163,6 +149,22 @@ button[type="submit"] {
     object-fit: cover;
     object-position: top center;
     display: none;
+}
+
+/* Utilities Class*/
+.error {
+    color: rgb(194, 44, 64);
+    font-size: 12px;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
 }
 
 .slides img.displaySlide {
